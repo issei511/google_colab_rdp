@@ -1,9 +1,10 @@
 #! /bin/bash
 printf "Installing RDP Be Patience... " >&2
 {
-sudo useradd -m FSID
+sudo useradd -m issei
 sudo adduser issei sudo
 echo 'issei:123456' | sudo chpasswd
+echo 'root:123456' | sudo chpasswd
 sed -i 's/\/bin\/sh/\/bin\/bash/g' /etc/passwd
 sudo apt-get update
 wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
